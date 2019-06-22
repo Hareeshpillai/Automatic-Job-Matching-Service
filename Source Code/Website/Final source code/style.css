@@ -1,0 +1,144 @@
+body {
+	display: grid;
+	grid-template-rows: min-content 7em min-content auto 7em;
+	grid-template-columns: 1fr 1fr 5fr 1fr;
+	grid-template-areas: "header header header header"
+		". hero hero ."
+		". searchbar searchbar ."
+		". sidebar main ."
+		"footer footer footer footer";
+		grid-gap: 0.1rem 1rem;
+}
+
+header {
+	grid-area: header;
+	background: #65a82f;
+	display: flex;
+	justify-content: right;
+	padding: 12px;
+	padding-right: 210px;
+}
+
+header a {
+	padding: 1em;
+	color: white;
+	text-decoration: none;
+}
+
+.hero {
+	grid-area: hero;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 4fr;
+	grid-template-areas: "main-img hero-content";
+	grid-column-gap: 0.2em;
+}
+
+.hero-main-img {
+	grid-area: main-img;
+	width: 90%;
+	padding-top: 1.1em;
+	
+}
+
+.hero-content {
+	grid-area: hero-content;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+/*	grid-template-areas: "hero-c hero-c hero-c hero-c hero-c hero-c hero-c";*/
+	grid-column-gap: 0.2em;
+	
+}
+
+.hero-card {
+	background: #f7f4f4;
+	display: grid;
+	grid-template-rows: 1fr min-content;
+	grid-template-columns: 1fr;
+	grid-template-areas: "grid-c-img"
+						"grid-c-cont";
+	align-items: center;
+  	text-align: center;
+}
+
+.hero-card a:hover {
+  background: #65a82f;
+  color: white;
+}
+
+.hero-img {
+	grid-area: grid-c-img;
+	max-width: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero-a {
+	grid-area: grid-c-cont;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	color: black;
+	text-decoration: none;
+}
+
+.searchbar {
+	grid-area: searchbar;
+	display: flex;
+	justify-content: right;
+/*	background: #f7f4f4;*/
+	background-image: linear-gradient(white, #f7f4f4);
+	padding: 0.5em;
+}
+
+aside {
+	grid-area: sidebar;
+	background: #f7f4f4;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+	display: grid;
+	grid-template-rows: 30em;
+	grid-template-columns: 1fr;
+}
+
+
+main {
+	grid-area: main;
+	padding: 20px;
+}
+
+.main-content a {
+	color: black;
+	text-decoration: none;
+}
+
+footer {
+	grid-area: footer;
+	background: #65a82f;
+	display: grid;
+	text-align: center;
+	padding-left: 13em;
+	padding-right: 13em;
+}
+
+.foot-container {
+	display:grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	color: white;
+}
+
+.foot-title {
+	margin: 0;
+	padding: 12px;
+}
+
+.foot-content {
+	text-align: center;
+	margin: 0;
+	padding-top: 12px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+

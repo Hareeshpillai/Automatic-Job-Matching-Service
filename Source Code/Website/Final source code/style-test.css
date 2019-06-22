@@ -1,0 +1,97 @@
+
+.menu {
+  	height: 300px;
+/*	grid-template-rows: 1fr min-content 3fr;  Seems to not be needed with the height setting
+	grid-template-columns: 1fr; */
+	grid-template-areas: "side-image"
+						"side-tit"
+						"side-cont";
+	padding: 0.2em;
+}
+
+.side-img {
+	grid-area: side-image;
+	max-width: 100%;
+	background: yellow;
+
+}
+
+.side-title {
+	grid-area: side-tit;
+	background: #65a82f;
+	color: white;
+	text-align: center;
+	padding: 17px;
+	margin-top:0.1em;
+	margin-bottom:0.1em;
+}
+.side-content {
+	grid-area: side-cont;
+	display: grid;
+	text-align: center;
+	align-items: center;
+}
+
+.side-content a {
+	background: white;
+	display: block;
+	padding: 18px;
+	color: black;
+	text-decoration: none;
+} 
+
+.side-content a:hover {
+  background: #65a82f;
+  color: white;
+}
+
+
+main {
+	grid-area: main;
+	padding: 20px;
+}
+
+.main-content a {
+
+}
+
+.sign-up-link {
+	color: black;
+	text-decoration: none;
+}
+
+.terms {
+	color: blue;
+	text-decoration: none;
+}
+
+footer {
+	grid-area: footer;
+	background: #65a82f;
+	display: grid;
+	text-align: center;
+	padding-left: 13em;
+	padding-right: 13em;
+}
+
+.foot-container {
+	display:grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	color: white;
+}
+
+.foot-title {
+	margin: 0;
+	padding: 12px;
+}
+
+.foot-content {
+	text-align: center;
+	margin: 0;
+	padding-top: 12px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+
